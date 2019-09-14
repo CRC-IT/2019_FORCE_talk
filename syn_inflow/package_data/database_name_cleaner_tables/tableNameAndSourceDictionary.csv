@@ -1,0 +1,133 @@
+﻿SourceType,ServerName,DBName,DirtyNameMain,CleanName,DirtyJoinToForAPI,MainJoinVar,JoinTableVar,VarsToJoin,APIVar,DateVar,Comments,Clean Columns Setup
+SQL,CKCWBDA2,BDA_OWR5KVPC,SACBASIN_Z2_PICK,PickInfo,"SACBASIN_Z2_WELL_MASTER,SACBASIN_Z2_VC_PICKSURF_NAME","WELL_ID,PICK_SURF_ID","WELL_ID,PICK_SURF_ID",WELL_UWI;PICK_SURF_NAME,WELL_UWI,None,"Pick and Well ID types are float, may cause issues, we'll see",Yes
+SQL,CKCWBDA2,BDA_LOG_SACVALLEY,LOG_CurveData_PIVOT,WellLogs,LOG_WellInformation_PIVOT,LogXREFID,LogXREFID,API,API,None,,Yes
+SQL,CKCWBDA2,BDA_LOG_ELKHILLS,LOG_CurveData_PIVOT,WellLogs,LOG_WellInformation_PIVOT,LogXREFID,LogXREFID,API,API,None,,Yes
+SQL,CKCWBDA2,BDA_EKPSPP,MAST_ZONE,WellCompletionInfo,None,None,None,None,API_NO14,None,,Yes
+SQL,CKCWBDA2,BDA_EKPSPP,EDM_DM_EVENT_T,stimulations,SITE_VW_WELL_INFO_GENERAL_DETAIL,WELL_ID,WELL_ID,API_NO14,API_NO14,DATE_OPS_END,,Yes
+SQL,CKCWBDA2,BDA_CKCWSQLB_EKXSPOC,dbo_tblWellDetails,current_ops_well_details,"dbo_tblNodeMaster,dbo_tblPumpingUnits","NodeID,PumpingUnitID","NodeID,UnitID","OtherWellID1;ManufID,CrankHoles,Stroke1,Stroke2,Stroke3,Stroke4,Stroke5,StructRating,GearboxRating,MaxStroke",OtherWellID1,LastTestDate,,No
+SQL,CKCWBDA2,BDA_CKCWSQLB_EKXSPOC,dbo_tblXDiagResults,well_diagnostics,dbo_tblNodeMaster,NodeID,NodeID,OtherWellID1,OtherWellID1,Date,some insane dates in there…,No
+SQL,CKCWBDA2,BDA_CKCWSQLB_EKXSPOC,dbo_tblNodeMaster,xspoc_nodes,None,None,None,None,OtherWellID1,LastGoodScanTime,,No
+SQL,CKCWBDA2,BDA_OWR5KELK,ELK_HILLS_PICK,PickInfo,"ELK_HILLS_WELL_MASTER,ELK_HILLS_VC_PICKSURF_NAME","WELL_ID,PICK_SURF_ID","WELL_ID,PICK_SURF_ID",WELL_UWI;PICK_SURF_NAME,WELL_UWI,None,"Pick and Well ID types are float, may cause issues, we'll see",Yes
+SQL,CKCWBDA2,BDA_EKPSPP,EDM_CD_ASSEMBLY_T,assembly,SITE_VW_WELL_INFO_GENERAL_DETAIL,WELL_ID,WELL_ID,API_NO14,API_NO14,None,,Yes
+SQL,CKCWBDA2,BDADB,BDA_PERF_StatePerEvent_PIVOT,PerforationState,None,None,None,None,API_NO14,None,,Partial
+SQL,CKCWBDA2,BDA_EKPSPP,DSS_ENGINEERING_NOTES,WellReviewNotes,None,None,None,None,PID,CREATE_DATE,,No
+SQL,CKCWBDA2,BDA_EKPSPP,DSS_RTE_ECONOMICS,RTE_economics,None,None,None,None,PID,CREATE_DATE,,No
+SQL,CKCWBDA2,BDA_LGPSPP,MAST_ZONE,WellCompletionInfo,None,None,None,None,API_NO14,None,,Yes
+SQL,CKCWBDA2,BDA_CKCWSQLB_EKXSPOC,vw_Well_analog_failure2,Well_Failure,None,None,None,None,OtherWellID1,Date,Built by David and Eric,No
+SQL,CKCWBDA2,BDADB,LBU_MARKERS,PickInfo,tbl_Well_Info_General_Detail,wellkey,WELL_COMP_NAME,API_NO14,API_NO14,None,LBU Picks,Yes
+SQL,CKCWBDA2,BDA_LOG_ALLCRC,LOG_CurveData_PIVOT,WellLogs,LOG_WellInformation_PIVOT,LogXREFID,LogXREFID,API,API,None,,Yes
+SQL,CKCWBDA2,BDADB,tbl_sv_picks_d,PickInfo,None,None,None,None,Well_identifier,None,South Valley Picks,No
+SQL,CKCWBDA2,BDA_OWR5KVPC,SACBASIN_Z2_DIR_SURVEY_PT,Surveys,SACBASIN_Z2_WELL_MASTER,WELL_ID,WELL_ID,"WELL_UWI,SPUD_DATE",WELL_UWI,SPUD_DATE,Sac Valley OW Surveys,Yes
+SQL,CKCWBDA2,BDADB,blkeng_press,pressures,tbl_Well_Info_General_Detail,well_name,WELL_COMP_NAME,API_NO14,API_NO14,survey_date,LBU Pressures,Yes
+SQL,CKCWBDA2,BDADB,piaccount_wltest,piaccount_wltest,tbl_Well_Info_General_Detail,wellname,WELL_COMP_NAME,API_NO14,API_NO14,test_date,LBU Tests History,Yes
+SQL,CKCWBDA2,BDADB,LBU_MARKERS,PickInfo,tbl_Well_Info_General_Detail,wellkey,WELL_COMP_NAME,API_NO14,API_NO14,None,LBU Picks,Yes
+SQL,CKCWBDA2,BDA_LOG_ALLCRC,LOG_CurveData_PIVOT,WellLogs,LOG_WellInformation_PIVOT,LogXREFID,LogXREFID,API,API,None,,Yes
+SQL,CKCWBDA2,BDADB,tbl_sv_picks_d,PickInfo,None,None,None,None,Well_identifier,None,South Valley Picks,No
+SQL,CKCWBDA2,BDA_OWR5KVPC,SACBASIN_Z2_WELL_PERFORATION,wellbore_openings,SACBASIN_Z2_WELL_MASTER,WELL_ID,WELL_ID,"WELL_UWI,WELL_NAME_FREE",WELL_UWI,PERFORATION_DATE,Sac Valley OW Perfs,No
+SQL,CKCWBDA2,BDADB,tqprod_geology_tops,PickInfo,tbl_Well_Info_General_Detail,wellid,WELL_COMP_NAME,API_NO14,API_NO14,None,Tidelands Picks,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_XSPOC_Test_Hist,Well_XSPOC_Test_Hist,tbl_Well_Info_General_Detail,NodeID,WELL_AUTO_NAME,API_NO14,API_NO14,TestDate,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Analog_Hist,Well_Analog_Hist,tbl_Well_Info_General_Detail,NodeID,WELL_AUTO_NAME,API_NO14,API_NO14,Date,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Analog_Hist_CleanName,Well_Analog_Hist_CleanName,tbl_Well_Info_General_Detail,NodeID,WELL_AUTO_NAME,API_NO14,API_NO14,Date,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Analog_Hist_CleanName_DailyAvg,Well_Analog_Hist_CleanName_DailyAvg,tbl_Well_Info_General_Detail,NodeID,WELL_AUTO_NAME,API_NO14,API_NO14,Date,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Bore_Hist,Well_Bore_Hist,tbl_Well_Info_General_Detail,"well_id, wellbore_id","WELL_ID,WELLBORE_ID","API_NO14,WELL_AUTO_NAME",API_NO14,KO_Date,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Card_Hist,Well_Card_Hist,tbl_Well_Info_General_Detail,NodeID,WELL_AUTO_NAME,API_NO14,API_NO14,Date,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Chem_Hist,Well_Chem_Hist,tbl_Well_Info_General_Detail,Well,WELL_COMMON_NAME,"API_NO14,WELL_AUTO_NAME",API_NO14,StartDate,North Only,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Dev_Hist,Well_Dev_Hist,tbl_Well_Info_General_Detail,"well_id, wellbore_id","WELL_ID,WELLBORE_ID","API_NO14,WELL_AUTO_NAME",API_NO14,survey_date,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_DH_Hist,Well_DH_Hist,tbl_Well_Info_General_Detail,"well_id, wellbore_id","WELL_ID,WELLBORE_ID","API_NO14,WELL_AUTO_NAME",API_NO14,date_status,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Event_Hist,Well_Event_Hist,tbl_Well_Info_General_Detail,well_id,WELL_ID,"API_NO14,WELL_AUTO_NAME",API_NO14,date_ops_start,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Note_Hist,Well_Note_Hist,tbl_Well_Info_General_Detail,API_NO14,API_NO14,WELL_AUTO_NAME,API_NO14,Comment_date,North Only,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_OIT_Test_Hist,Well_OIT_Test_Hist,tbl_Well_Info_General_Detail,API14,API_NO14,WELL_AUTO_NAME,API14,StartTestDateTimeStamp,North Only,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Operations_Summary_Hist,Well_Operations_Summary_Hist,tbl_Well_Info_General_Detail,"well_id, wellbore_id","WELL_ID,WELLBORE_ID","API_NO14,WELL_AUTO_NAME",API_NO14,DATE,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Perf_Hist,Well_Perf_Hist,tbl_Well_Info_General_Detail,"well_id, wellbore_id","WELL_ID,WELLBORE_ID","API_NO14,WELL_AUTO_NAME",API_NO14,date_interval_shot,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Pump_Hist,Well_Pump_Hist,tbl_Well_Info_General_Detail,"well_id, wellbore_id","WELL_ID,WELLBORE_ID","API_NO14,WELL_AUTO_NAME",API_NO14,date_ops_end,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Card_Hist_Decoded,Well_Card_Hist_Decoded,"tbl_Well_Info_General_Detail,tbl_CardType_Reference","node_id,card_type","WELL_AUTO_NAME,CardType",API_NO14;CardTypeDesc,API_NO14,plot_date,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_XDiag_Hist,Well_XDiag_Hist,tbl_Well_Info_General_Detail,NodeID,WELL_AUTO_NAME,API_NO14,API_NO14,Date,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Service_Status_Hist,Well_Service_Status_Hist,tbl_Well_Info_General_Detail,NodeID,WELL_AUTO_NAME,API_NO14,API_NO14,RecordDate,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Downtime_Hist,Well_Downtime_Hist,tbl_Well_Info_General_Detail,api_no14,API_NO14,WELL_AUTO_NAME,api_no14,downtime_date,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Allocation_Hist,Well_Allocation_Hist,tbl_Well_Info_General_Detail,API_NO14,API_NO14,WELL_AUTO_NAME,API_NO14,TestDate,North Only,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_XSPOC_FluidShot_Hist,Well_XSPOC_FluidShot_Hist,tbl_Well_Info_General_Detail,NodeID,WELL_AUTO_NAME,API_NO14,API_NO14,FluidShotDate,Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_BHA_Depth_Hist,Well_BHA_Depth_Hist,tbl_Well_Info_General_Detail,"well_id, wellbore_id","WELL_ID,WELLBORE_ID","API_NO14,WELL_AUTO_NAME",API_NO14,date_status,North Only,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Drilling_Cost_Hist,Well_Drilling_Cost_Hist,tbl_Well_Info_General_Detail,API_NO14,API_NO14,WELL_AUTO_NAME,API_NO14,JOB_END_DATE,North Only,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Info_General_Detail,Well_List_Info,None,None,None,None,API_NO14,None,Reference material for all versions for any well - Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Info_General_Detail_CV,Well_List_Info_CV,None,None,None,None,API_NO14,None,Reference material for most current version for any well - Combines South and North Wells,Yes
+SQL,CKCWBDA2,BDA_RWI,dbo.piaccount.fop,tbl_well_xspoc_FluidShot_Hist,tbl_Well_Info_General_Detail,wellname,WELL_COMP_NAME,"API_NO14,",API_NO14,test_date,Fluid over pump data for Long Beach,No
+SQL,CKCWBDA2,BDA_OWR5KLG,DOMINGUEZ_PICK,PickInfo,"DOMINGUEZ_WELL_MASTER,DOMINGUEZ_VC_PICKSURF_NAME","WELL_ID,PICK_SURF_ID","WELL_ID,PICK_SURF_ID",WELL_UWI;PICK_SURF_NAME,WELL_UWI,None,"Pick and Well ID types are float, may cause issues, we'll see",Yes
+SQL,CKCWBDA2,BDA_OWR5KLG,HB_AERA_PICK,PickInfo,"HB_AERA_WELL_MASTER,HB_AERA_VC_PICKSURF_NAME","WELL_ID,PICK_SURF_ID","WELL_ID,PICK_SURF_ID",WELL_UWI;PICK_SURF_NAME,WELL_UWI,None,"Pick and Well ID types are float, may cause issues, we'll see",Yes
+SQL,CKCWBDA2,BDA_OWR5KLG,LABASIN_DB_PICK,PickInfo,"LABASIN_DB_WELL_MASTER,LABASIN_DB_VC_PICKSURF_NAME","WELL_ID,PICK_SURF_ID","WELL_ID,PICK_SURF_ID",WELL_UWI;PICK_SURF_NAME,WELL_UWI,None,"Pick and Well ID types are float, may cause issues, we'll see",Yes
+SQL,CKCWBDA2,BDA_OWR5KLG,VENTURA_AD_PICK,PickInfo,"VENTURA_AD_WELL_MASTER,VENTURA_AD_VC_PICKSURF_NAME","WELL_ID,PICK_SURF_ID","WELL_ID,PICK_SURF_ID",WELL_UWI;PICK_SURF_NAME,WELL_UWI,None,"Pick and Well ID types are float, may cause issues, we'll see",Yes
+SQL,CKCWBDA2,BDA_OWR5KLG,W_WILMINGTON_PICK,PickInfo,"W_WILMINGTON_WELL_MASTER,W_WILMINGTON_VC_PICKSURF_NAME","WELL_ID,PICK_SURF_ID","WELL_ID,PICK_SURF_ID",WELL_UWI;PICK_SURF_NAME,WELL_UWI,None,"Pick and Well ID types are float, may cause issues, we'll see",Yes
+SQL,CKCWBDA2,BDA_OWR5KLG,WILMINGTON_PICK,PickInfo,"WILMINGTON_WELL_MASTER,WILMINGTON_VC_PICKSURF_NAME","WELL_ID,PICK_SURF_ID","WELL_ID,PICK_SURF_ID",WELL_UWI;PICK_SURF_NAME,WELL_UWI,None,"Pick and Well ID types are float, may cause issues, we'll see",Yes
+SQL,CKCWBDA2,BDA_OWR5KVPC,KETTLEMAN_NAD83_Z4_PICK,PickInfo,"KETTLEMAN_NAD83_Z4_WELL_MASTER,KETTLEMAN_NAD83_Z4_VC_PICKSURF_NAME","WELL_ID,PICK_SURF_ID","WELL_ID,PICK_SURF_ID",WELL_UWI;PICK_SURF_NAME,WELL_UWI,None,"Pick and Well ID types are float, may cause issues, we'll see",Yes
+SQL,CKCWBDA2,BDA_OWR5KVPC,SJV_PICK,PickInfo,"SJV_WELL_MASTER,SJV_VC_PICKSURF_NAME","WELL_ID,PICK_SURF_ID","WELL_ID,PICK_SURF_ID",WELL_UWI;PICK_SURF_NAME,WELL_UWI,None,"Pick and Well ID types are float, may cause issues, we'll see",Yes
+SQL,CKCWBDA2,BDA_OWR5KVPC,VENTURA_PICK,PickInfo,"VENTURA_WELL_MASTER,VENTURA_VC_PICKSURF_NAME","WELL_ID,PICK_SURF_ID","WELL_ID,PICK_SURF_ID",WELL_UWI;PICK_SURF_NAME,WELL_UWI,None,"Pick and Well ID types are float, may cause issues, we'll see",Yes
+SQL,ccslpsq02,bda,data_science.vods_directional_surveys,Surveys,None,None,None,None,well_uwi,None,Denodo VODS Surveys,Yes
+SQL,ccslpsq02,bda,data_science.vods_wellcomp_v,Well_List_Info_vods,None,None,None,None,api_no14,None,Denodo VODS Comp Table,Yes
+SQL,ccslpsq02,bda,data_science.vods_well,WellInfo,None,None,None,None,api_no10,None,Denodo VODS Wellhead Data,Yes
+SQL,ccslpsq02,bda,data_science.vods_wellbore_openings,wellbore_openings,None,None,None,None,api_no12,current_status_date,Denodo VODS Wellbore Openings,Yes
+SQL,ccslpsq02,bda,data_science.vods_pressures,pressures,None,None,None,None,pid12,survey_date,Denodo VODS Pressures,Yes
+SQL,CKCWBDA2,BDADB,tbl_Well_Info_General_Detail,Well_List_Info_SQL_Test,None,None,None,None,API_NO14,STATUS_DATE,SQL Copy Well Info General Detail,Yes
+SQL,CKCWBDA2,BDA_EKPSPP,EDM_CD_SURVEY_STATION_T,Surveys,SITE_VW_WELL_INFO_GENERAL_DETAIL,WELLBORE_ID,WELLBORE_ID,API_NO14,API_NO14,None,,Yes
+SQL,CKCWBDA2,BDA_LGPSPP,EDM_CD_SURVEY_STATION_T,Surveys,EDM_CD_WELLBORE_T,WELLBORE_ID,WELLBORE_ID,API_NO,API_NO,SURVEY_DATE,,Yes
+SQL,CKCWBDA2,BDADB,LBU_EDM_SURVEYS_ALL_V,Surveys,None,None+F26:L26,None,None,API_NO14,survey_date,LBU Surveys,Yes
+SQL,CKCWBDA2,BDADB,LBU_EDM_SURVEYS_ALL_V,Surveys,None,None,None,None,API_NO14,survey_date,LBU Surveys,Yes
+SQL,CKCWBDA2,BDADB,tqprod_geology_sur_data,Surveys,tbl_Well_Info_General_Detail,wellid,WELL_COMP_NAME,API_NO14,API_NO14,None,Tidelands Surveys,Yes
+SQL,CKCWBDA2,BDA_OWR5KVPC,SACBASIN_Z2_DIR_SURVEY_PT,Surveys,SACBASIN_Z2_WELL_MASTER,WELL_ID,WELL_ID,"WELL_UWI,SPUD_DATE",WELL_UWI,SPUD_DATE,Sac Valley OW Surveys,Yes
+SQL,CKCWBDA2,BDA_OWR5KVPC,SACBASIN_Z2_WELL_PERFORATION,wellbore_openings,SACBASIN_Z2_WELL_MASTER,WELL_ID,WELL_ID,"WELL_UWI,WELL_NAME_FREE",WELL_UWI,PERFORATION_DATE,Sac Valley OW Perfs,No
+SQL,CKCWBDA2,BDA_EKPSPP,ODS_OXY_MONTHLY_VOLUMES,monthly_volumes,None,None,None,None,API_NO14,PROD_INJ_DATE,,Yes
+SQL,CKCWBDA2,BDADB,prodinj_masterprd,monthly_volumes,tbl_Well_Info_General_Detail,well_name,WELL_COMP_NAME,API_NO14,API_NO14,None,LBU production,Yes
+SQL,CKCWBDA2,BDADB,prodin_injcorhinst,monthly_volumes,tbl_Well_Info_General_Detail,well_name,WELL_COMP_NAME,API_NO14,API_NO14,None,LBU Injection,Yes
+SQL,CKCWBDA2,BDADB,ingres_tidelands_new_tidelands_injhist,monthly_volumes,tbl_Well_Info_General_Detail,well_name,WELL_COMP_NAME,API_NO14,API_NO14,None,Tidelands Injection,Yes
+SQL,CKCWBDA2,BDADB,ingres_tidelands_new_tidelands_prodhist,monthly_volumes,tbl_Well_Info_General_Detail,well_name,WELL_COMP_NAME,API_NO14,API_NO14,None,Tidelands production,Yes
+SQL,CKCWBDA2,BDA_EKPSPP,ODS_WELL,WellInfo,None,None,None,None,API_NO10,None,Be sure to append '0000' to UWI,Yes
+SQL,CKCWBDA2,BDA_LGPSPP,ODS_WELL,WellInfo,None,None,None,None,API_NO10,None,Be sure to append '0000' to UWI,Yes
+SQL,CKCWBDA2,BDA_EKPSPP,SITE_CRC_PRESSURES,pressures,None,None,None,None,PID12,SURVEY_DATE,Be sure to append '00' to PID,Yes
+SQL,CKCWBDA2,BDADB,blkeng_press,pressures,tbl_Well_Info_General_Detail,well_name,WELL_COMP_NAME,API_NO14,API_NO14,survey_date,LBU Pressures,Yes
+SQL,ccslpsq02,postgres,allocation_table_staged,allocation_table_staged,None,None,None,None,API14,DATE,Allocation Table outputs (staged),No
+SQL,ccslpsq02,postgres,allocation_table_deploy,allocation_table_deploy,None,None,None,None,API14,DATE,Allocation Table outputs (deployed),No
+SQL,aws-bda-db,postgres,addpay_staged,add_pay_staged,None,None,None,None,API14,DATE,Addpay Table outputs (staged),No
+SQL,ccslpsq02,postgres,addpay_deploy,add_pay_deploy,None,None,None,None,API14,DATE,Addpay Table outputs (deployed),No
+SQL,aws-bda-db,postgres,past_completions_staged,past_completions_staged,None,None,None,None,API14,DATE,Past Comps Table outputs (staged),No
+SQL,ccslpsq02,postgres,past_completions_deploy,past_completions_deploy,None,None,None,None,API14,DATE,Past Comps Table outputs (deployed),No
+SQL,CKCWBDA2,BDADB,prodinj_masterprd,monthly_volumes,tbl_Well_Info_General_Detail,well_name,WELL_COMP_NAME,API_NO14,API_NO14,None,LBU production,Yes
+SQL,CKCWBDA2,BDADB,prodin_injcorhinst,monthly_volumes,tbl_Well_Info_General_Detail,well_name,WELL_COMP_NAME,API_NO14,API_NO14,None,LBU Injection,Yes
+SQL,CKCWBDA2,BDADB,ingres_tidelands_new_tidelands_injhist,monthly_volumes,tbl_Well_Info_General_Detail,well_name,WELL_COMP_NAME,API_NO14,API_NO14,None,Tidelands Injection,Yes
+SQL,CKCWBDA2,BDADB,ingres_tidelands_new_tidelands_prodhist,monthly_volumes,tbl_Well_Info_General_Detail,well_name,WELL_COMP_NAME,API_NO14,API_NO14,None,Tidelands production,Yes
+SQL,CKCWBDA2,BDA_EKPSPP,ODS_OXY_MONTHLY_VOLUMES,monthly_volumes,None,None,None,None,API_NO14,PROD_INJ_DATE,,Yes
+SQL,ccslpsq02,bda,mer_actuals_and_outlook_v,planning_capital_results,None,None,None,None,api_no10,jobstartdate,planning expected vs actuals,No
+REST,data.crc.com,crc,vendor_processinstruments,Well_PI_Test_Hist,None,None,None,None,api,date,Denodo PI Tests,Yes
+REST,data.crc.com,crc,vendor_pros,Well_PROS_Test_Hist,None,None,None,None,apinumber,testdate,Denodo PROS Tests,Yes
+REST,data.crc.com,bda,bv_ekpspp_site_specific_elk_hills_gath_sys_tests,GEHA_Gathering_System_Testers,None,None,None,None,api_no14,daily_date,Denodo GEHA Gathering Systems,Yes
+REST,ckcwbda02-d,crc,i_well_info_general_detail,Well_List_Info_Denodo_Test,None,None,None,None,api_no14,status_date,Dendo Copy Well Info General Detail,Yes
+REST,data.crc.com,bda,data_science.vods_picks,PickInfo,None,None,None,None,api_no12,None,Denodo Picks,No
+REST,data.crc.com,crc,vods_directional_surveys,Surveys,None,None,None,None,well_uwi,None,Denodo VODS Surveys,Yes
+REST,data.crc.com,crc,vods_wellcomp_v,Well_List_Info_vods,None,None,None,None,api_no14,None,Denodo VODS Comp Table,Yes
+REST,data.crc.com,crc,vods_monthly_volumes,monthly_volumes,None,None,None,None,api_no14,prod_inj_date,Denodo VODS Monthly Volumes,Yes
+REST,data.crc.com,crc,vods_well,WellInfo,None,None,None,None,api_no10,None,Denodo VODS Wellhead Data,Yes
+REST,data.crc.com,crc,vods_wellbore_openings,wellbore_openings,None,None,None,None,api_no12,current_status_date,Denodo VODS Wellbore Openings,Yes
+REST,data.crc.com,crc,vods_pressures,pressures,None,None,None,None,pid12,survey_date,Denodo VODS Pressures,Yes
+REST,ckcwbda02-d,crc,i_well_info_general_detail,Well_List_Info_D,None,None,None,None,api_no14,status_date,Reference material for all versions for any well - Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_info_general_detail_current_state,Well_List_Info_Current_State_D,None,None,None,None,api_no14,status_date,Reference material for most current state for any well - Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_analog_poc_param_mop_reference,Analog_POC_Param_MOP_Reference_D,None,None,None,None,api_no14,None,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_allocation_hist,Well_Allocation_Hist_D,None,None,None,None,api_no14,testdate,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_analog_detail_reference,Well_Analog_Detail_Reference_D,None,None,None,None,api_no14,None,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_analog_hist,Well_Analog_Hist_D,None,None,None,None,api_no14,date,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_bore_hist,Well_Bore_Hist_D,None,None,None,None,api_no14,ko_date,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_card_hist,Well_Card_Hist_D,None,None,None,None,api_no14,date,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_chem_hist,Well_Chem_Hist_D,None,None,None,None,api_no14,startdate,North Wells Only,Yes
+REST,ckcwbda02-d,crc,i_well_deviation_hist,Well_Deviation_Hist_D,None,None,None,None,api_no14,survey_date,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_downtime_hist,Well_Downtime_Hist_D,None,None,None,None,api_no14,downtime_date,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_drilling_bha_hist,Well_Drilling_BHA_Hist_D,None,None,None,None,api_no14,ko_date,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_drilling_cost_hist,Well_Drilling_Cost_Hist_D,None,None,None,None,api_no14,job_end_date,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_event_hist,Well_Event_Hist_D,None,None,None,None,api_no14,date_ops_start,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_fluidshot_hist,Well_Fluidshot_Hist_D,None,None,None,None,api_no14,fluidshotdate,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_note_hist,Well_Note_Hist_D,None,None,None,None,api_no14,comment_date,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_operations_summary_hist,Well_Operations_Summary_Hist_D,None,None,None,None,api_no14,date,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_perf_hist,Well_Perf_Hist_D,None,None,None,None,api_no14,date_interval_shot,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_prod_bha_hist_depth_placement,Well_Prod_BHA_Hist_Depth_Placement_D,None,None,None,None,api_no14,date_ops_end,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_prod_bha_hist,Well_Prod_BHA_Hist_D,None,None,None,None,api_no14,date_status,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_pump_hist,Well_Pump_Hist_D,None,None,None,None,api_no14,date_ops_end,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_service_status_hist,Well_Service_Status_Hist_D,None,None,None,None,api_no14,recorddate,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_test_hist_oit,Well_Test_Hist_OIT_D,None,None,None,None,api_no14,starttestdatetimestamp,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_test_hist_xspoc,Well_Test_Hist_XSPOC_D,None,None,None,None,api_no14,testdate,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_xdiag_results_hist,Well_XDiag_Results_Hist_D,None,None,None,None,api_no14,date,Combines South and North Wells,Yes
+REST,ckcwbda02-d,crc,i_well_xdiag_rod_results_hist,Well_XDiag_Rod_Results_Hist_D,None,None,None,None,api_no14,date,Combines South and North Wells,Yes
